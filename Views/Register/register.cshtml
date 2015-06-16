@@ -1,0 +1,92 @@
+﻿
+@{
+       ViewBag.Title="Suri's Fashion Wear";
+       Layout="~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+    <br/>
+    <h1 style="text-align: center; font-family:'Arabic Typesetting'; font-size:60px">Suri's Fashion Wear</h1>
+    <div class="row content">
+            <div class="col-md-7">
+                <div class="col-md-offset-7">
+                    
+                    <h2 class="intro-text text-centre" style="text-align: center; font-family:Castellar">
+                        Registeration Form
+                        <strong></strong>
+                    </h2>
+                    <hr>
+                    <form class="form-signin" name="SignUp" method="post" action="/Home/getRegistered">
+                        <input class="form-control" type="text" size="35" placeholder="First Name" name="fn">
+
+                        <input class="form-control" type="text" size="35" placeholder="Last Name" name="ln">
+
+                        <input class="form-control" type="email" size="35" placeholder="User Name                                  yahoo.com" name="email">
+
+                        <input class="form-control" type="password" size="35" placeholder="Password" name="pswd">
+                        <br>
+                        Day Of Birth:<br>
+                        <select name="day">
+                            <option>Monday</option>
+                            <option>Tuesday</option>
+                            <option>Wednesday</option>
+                            <option>Thursday</option>
+                            <option>Friday</option>
+                            <option>Saturday</option>
+                            <option>Sunday</option>
+                        </select>
+                        <select name="month">
+                            <option>January</option>
+                            <option>February</option>
+                            <option>March</option>
+                            <option>April</option>
+                            <option>May</option>
+                            <option>June</option>
+                            <option>July</option>
+                            <option>August</option>
+                            <option>September</option>
+                            <option>October</option>
+                            <option>November</option>
+                            <option>December</option>
+                        </select>
+                        <select name="year">
+                            <option>1995</option>
+                            <option>1996</option>
+                            <option>1997</option>
+                            <option>1998</option>
+                            <option>1999</option>
+                            <option>2000</option>
+                            <option>2001</option>
+                            <option>2002</option>
+                            <option>2003</option>
+                            <option>2004</option>
+                            <option>2005</option>
+                            <option>2006</option>
+                            <option>2007</option>
+                            <option>2008</option>
+                            <option>2009</option>
+                            <option>2010</option>
+                            <option>2011</option>
+                            <option>2012</option>
+                            <option>2013</option>
+                            <option>2014</option>
+                            <option>2015</option>
+
+                        </select>
+                        <br>
+                        <br>
+                        Gender:
+                        <input type="radio" name="gender">Male
+                        <input type="radio" name="gender">Female
+                        <br>
+                        <input class="form-control" type="text" size="35" placeholder="Mobile Number" name="phone">
+                        <br>
+                        I agree to
+                        <a href="#"> Terms </a>
+                        and
+                        <a href="#"> Privacy </a>
+                        <br><br>
+                        <input class="btn-success btn" type="submit" value="Create Account" />
+                    </form>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,31 @@
+﻿@{
+       ViewBag.Title="Suri's Fashion Wear";
+       Layout="~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+ @model List<Project.Models.Item>
+
+    <div class="row">     
+            
+            @foreach(var a in Model)
+            {
+           
+            <div class="col-md-4">
+                <
+                    <h3 style="color:blueviolet">@a.Title</h3>
+                    <img src="~/Images/@a.Image" height="230" width="230" />
+                    <p style="color:black">@a.Description</p>
+                    <h4>RS @a.Price: </h4>
+                    <div class="widget-footer">
+                    <p>
+                      <a href="/Login/login" class="btn btn-primary">Add To Cart</a>
+                     
+                    </p>
+                  </div>
+            </div>
+           }
+
+            </div>
+            <p>
+              <a href="/Login/login" class="btn btn-primary">ChecK Out</a>
+            </p>

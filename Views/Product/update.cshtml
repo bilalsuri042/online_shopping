@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "update";
+}
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+
+}
+@model List<Project.Models.Item>
+<div class="page-header">
+          <h1><font color="green">Update Product</font></h1>
+ </div>
+<div class="row">
+          <div class="span6 offset3">
+            <h4 class="widget-header"><i class="icon-lock"></i><font color="blue">Selete Product To Update</h4>
+            <div class="widget-body">
+              <div class="center-align">
+                  <div class="form-horizontal form-signin-signup">
+                      @using (Html.BeginForm("updateProduct","Product",FormMethod.Post))
+                      {
+                        <select name="pname">
+                        @foreach (var a in Model)
+                        {
+                            <option >@a.Title</option>
+                        }
+
+                        </select>
+                    <div class="pull-right">
+                  <input type="submit" value="Details" class="btn btn-primary btn-large"></div>
+               }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     
+   
+
+

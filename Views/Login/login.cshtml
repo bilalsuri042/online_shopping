@@ -1,0 +1,34 @@
+﻿@{
+       ViewBag.Title="Suri's Fashion Wear";
+       Layout="~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+ <br />
+
+    <h1 style="text-align: center; font-family:'Arabic Typesetting'; font-size:60px">Suri's Fashion Wear</h1>
+
+    <div class="row content">
+            <div class="col-md-7">
+                <div class="col-md-offset-7">
+                    <hr>
+                    <h2 class="intro-text text-centre" style="text-align: center; font-family:Castellar">
+                        Login Form
+                        <strong></strong>
+                    </h2>
+                    <hr>
+                    <form class="form-signin" method="post" action="/Acount/UserLogin">
+                        <h2 class="form-signin-heading">Please Sign In</h2>
+                        <label for="inputEmail" class="sr-only">Email address</label>
+                        <input type="text" id="inputEmail" class="form-control" placeholder="Email address" name="e" required>
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="p" required>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    </form>
+                </div>
+            </div>
+        </div>

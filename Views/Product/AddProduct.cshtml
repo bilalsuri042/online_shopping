@@ -1,0 +1,52 @@
+﻿@model Project.Models.Item
+
+@{
+    ViewBag.Title = "AddProduct";
+}
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+
+}
+<div class="content">
+      <div class="container">
+        <div class="page-header">
+          <h1><font color="green">Add Product to List</font></h1>
+        </div>
+        <div class="row">
+          <div class="span6 offset3">
+            <h4 class="widget-header"><i class="icon-lock"></i><font color="blue">Please Give Product Detail</h4>
+            <div class="widget-body">
+              <div class="center-align">
+                  <div class="form-horizontal form-signin-signup">
+                      @using (Html.BeginForm("addnewProduct", "Product", FormMethod.Post, new {@enctype="multipart/form-data" }))
+                      {
+                            @Html.AntiForgeryToken()
+                             @Html.ValidationSummary(true)
+                <!-- <form class="form-horizontal form-signin-signup" action="/Admin/addProduct" method="post"> -->
+                 <div><font color=" Black" size="5">@Html.LabelFor(m => m.Title)</div>
+                    @Html.TextBoxFor(m => m.Title, new { placeholder = "Product NAME" })
+                <!-- <input type="text" name="pname" placeholder="Product Name" required="required">-->
+                      @Html.ValidationMessageFor(m=>m.Title)
+                    <div><font color="Black" size="5">@Html.LabelFor(m => m.Price)</div>
+                    @Html.TextBoxFor(m => m.Price, new { placeholder = "Product price" })
+                     @Html.ValidationMessageFor(m=>m.Price)
+
+
+                    <div><font color="Black" size="5">@Html.LabelFor(m => m.Description)</div>
+                    @Html.TextBoxFor(m => m.Description, new { placeholder = "Product Description" })
+                     @Html.ValidationMessageFor(m=>m.Description)
+
+
+                    <div><font color="Black" size="5">@Html.LabelFor(m => m.Image)</font></div>
+                          <!--<div>@Html.TextBoxFor(m => m.Image, new { required = "required", value = "imge" })</div>-->
+                    <div ><input type="file" name="image"/></div>
+                    <div class="pull-right">
+                    <input type="submit" value="Add" class="btn btn-primary btn-large"></div>
+                      }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

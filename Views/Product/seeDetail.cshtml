@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "seeDetail";
+}
+@{
+    Layout ="~/Views/Shared/AdminLayout.cshtml";
+
+}
+@model List<Project.Models.Item>
+<h2>seeDetail</h2>
+<div align="center">
+<div class="thumbnail">
+                  <img src="~/Images/@Model[0].Image" style="height:150px;width:260px">
+                  <div class="caption">
+                    <h3>@Model[0].Title</h3>
+                    <p>
+                      <div>Decription    @Model[0].Description</div>
+                      <div>Price        @Model[0].Price</div>
+
+                    </p>
+                  </div>
+                  <div class="widget-footer">
+                    <p>
+                      <a href="/Product/updateProduct?pname=@Model[0].Title" class="btn btn-primary">Edit</a>&nbsp;
+                      <a href="/Product/delproduct?pname=@Model[0].Title" class="btn">Delete</a>
+                    </p>
+                  </div>
+                </div>
+    </div>

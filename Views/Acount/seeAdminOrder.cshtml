@@ -1,0 +1,48 @@
+﻿ @{
+    ViewBag.Title = "SeeOrder";
+}
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+
+}
+
+@model List<Project.Models.Order>
+ <div align="center"><div class="row">
+          <div class="span6 offset3">
+            <h4 class="widget-header"><i class="icon-lock"></i><font color="purple">This is your order Details</h4>
+            <div class="widget-body">
+              <div class="center-align">
+                  <div class="form-horizontal form-signin-signup">
+                          <table border="1">
+                            <tr>
+                                <td>Order Id</td>
+                                <td>Amount</td>
+                                <td>Date</td>
+                                <td>CustomerName</td>
+                                <td>Address</td>
+                                <td>Products</td>
+                            </tr>
+                              
+                          @foreach (var a in Model)
+                          {
+                              <tr>
+                                <td>@a.OId</td>
+                                <td>@a.Amount</td>
+                                <td>@a.Date</td>
+                                <td>@a.CustomerName</td>
+                                <td>@a.Address</td>
+                                <td>@a.PurchaseProducts</td>
+
+                                 
+                            </tr>
+                          }
+                          </table>
+                      </div>
+                  </div>
+                </div>
+              </div>
+     </div>
+     </div>
+     
+
+                  

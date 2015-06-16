@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="../Scripts/jquery-2.1.4.js"></script>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../Scripts/bootstrap.js"></script>
+    <style>
+        .container {
+            max-width: 900px;
+            margin-top: 50px;
+        }
+    </style>
+    @RenderSection("head",false)
+</head>
+<body  style="background-color:lightgray;">
+ <div class="container">
+        <div align="center"><a href="/Home/Index"><img src="/images/logo.png" alt="Suri's Fashion Wear" height="42" width="200"></a></div>
+
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="/Acount/Index1">HOME</a>
+                <a class="navbar-brand" href="/Acount/product1">PRODUCTS</a>
+                <a class="navbar-brand" href="/Acount/aboutus1">ABOUT US</a>
+                <a class="navbar-brand" href="/Acount/contact1">CONTACT</a>
+                <a class="navbar-brand" href="/Home/Index">SIGN_OUT</a>
+               
+
+            </div>
+        </nav>
+    <div>
+        @RenderBody()
+    </div>
+            <div style="background:lightyellow;">
+            <footer class="modal-footer">Copy Rights To Suri's Fashion Wear</footer>
+        </div>
+    </div>
+</body>
+</html>

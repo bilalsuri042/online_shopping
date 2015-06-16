@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "searchProduct";
+}
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+
+}
+
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+     @Scripts.Render("~/bundles/jquery")
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $("#modSelector").change(function () {
+                 var countryId = $("#modSelector").val();
+                 //alert(countryId);
+                 $("#ProductSelctor option").remove();
+
+
+                 $.getJSON("/Product/GetProduct?id=" + countryId, function (data) {
+                     $("#ProductSelctor").append('<option>-Select Product-</option>');
+                     $.each(data, function (i, item) {
+                         $("#ProductSelctor").append('<option value=' + item.Title + '>' + item.Title + '</option>');
+                         //alert('Id = ' + item.Id + " Name = " + item.Name);
+                     });
+
+                 });
+
+             });
+
+         });
+</script>
+
+<body>
+    <div class="page-header">
+          <h1><font color="green">Search Product</font></h1>
+</div>
+    <div align="center">
+      
+        
+      <font color="blue" size="5">
+
+      <div>
+      
+              <form action="/Product/seeDetail" method="post">
+                  <div>
+                      <select id="ProductSelctor" name="pname"></select>
+                  </div>
+
+
+                  <div>
+                      <input type="submit" value="See Details" />
+                  </div>
+                  </form>
+</font>
+        </div>
+    
+</body>
